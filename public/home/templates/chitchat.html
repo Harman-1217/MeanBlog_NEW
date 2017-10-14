@@ -1,0 +1,65 @@
+<section class="st-content" ng-controller="chitchatCtrl">
+    <section class="st-testimonial">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12">
+            <div class="page-heading">
+              <h1>ChitChat!!</h1>
+              <p>Let's connect with one another...</p>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-10 col-md-offset-1 no-padding">
+            <div class="col-md-4 col-sm-4" ng-repeat="testimonial in chitchat">
+              <div class="chitchat_outer">
+                <div class="chitcha_thumb"> <img src="{{chitchat.image}}" class="attachment-post-thumbnail size-post-thumbnail wp-post-image" alt=""  width="200" height="300"></div>
+                <div class="user_title"> <strong class="name">{{chitchat.name}}</strong></div>
+                <div class="chitcha_inner">
+                  <p>{{chitchat.description.substr(0,100)}}</p>
+                  <a data-toggle="modal" data-target="#myModal{{chitchat._id}}" href="javascript:void(0);" class="test_image_pop"  >Read More</a>
+             
+  
+                
+                  
+                   <!-- Modal -->
+    <div class="modal fade" id="myModal{{chitchat._id}}" role="dialog">
+      <div class="modal-dialog">
+      
+        <!-- Modal content-->
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal">&times;</button>        
+          </div>
+          <div class="modal-body">
+         
+                    <div class="pop_chitchat">
+                      <div style="position:absolute; left:0; top:0;">
+                        <div class="chitch_thumb sq"><img src="{{chitchat.image}}" class="attachment-post-thumbnail size-post-thumbnail wp-post-image" alt="" sizes="(max-width: 709px) 85vw, (max-width: 909px) 67vw, (max-width: 984px) 60vw, (max-width: 1362px) 62vw, 840px" width="200" height="300"></div>
+                      </div>
+                      <div class="user_title"> <strong class="name" style="text-align:left; float:left; margin-top:13px">{{chitchat.name}}</strong></div>
+                    </div>
+                    <div class="qoute">{{chitchat.description}}<i class="fa fa-quote-right quote_txt" aria-hidden="true"></i></div>
+              
+          </div>
+          
+        </div>
+        
+      </div>
+    </div>
+    
+  </div>
+                   
+                  
+                  
+                  
+                </div>
+              </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </section>
+  
+  
+  
